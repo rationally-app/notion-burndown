@@ -2,7 +2,7 @@ name: sprint start
 
 on:
   schedule:
-    - cron: "0 12 * * *" # 8pm daily TODO: make weekly
+    - cron: "0 12 * * 2" # 8pm every tuesday
 
 jobs:
   generate_burndown_chart:
@@ -22,6 +22,7 @@ jobs:
           NOTION_PROPERTY_PATTERN_STATUS_EXCLUDE: Ready to Deploy|DONE*
           SPRINT_START: true
       - name: Commit burndown chart
+        continue-on-error: true # not every run is at sprint start, so there may not be a chart
         run: |
           git config --local user.email ${{ secrets.GH_USER_EMAIL }}
           git config --local user.name "supplyally-bot"
