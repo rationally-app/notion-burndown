@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Generate burndown chart
-        uses: yongjiajie/notion-burndown@2.0.69.2
+        uses: yongjiajie/notion-burndown@2.0.69.3
         with:
           NOTION_KEY: ${{ secrets.NOTION_KEY }}
           NOTION_DB_BACKLOG: ${{ secrets.DATABASE_ID_BACKLOG }}
