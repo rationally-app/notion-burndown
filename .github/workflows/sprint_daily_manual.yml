@@ -33,9 +33,7 @@ jobs:
           force: true
       - name: On failure, send Slack message
         uses: craftech-io/slack-action@v1
-        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        if: failure()
         with:
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_SALLY_DEV }}
-          slack_channel: sally-test
-          slack_username: sally-mcsallyface
           status: failure

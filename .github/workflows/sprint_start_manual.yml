@@ -34,3 +34,9 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN_SUPPLYALLY_BOT }}
           force: true
+      - name: On failure, send Slack message
+        uses: craftech-io/slack-action@v1
+        if: failure()
+        with:
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_SALLY_DEV }}
+          status: failure
