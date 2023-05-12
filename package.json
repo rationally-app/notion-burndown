@@ -1,0 +1,42 @@
+{
+  "name": "notion",
+  "version": "1.0.0",
+  "description": "Burndown chart from Notion db",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx ncc build index.js --license licenses.txt",
+    "lint": "npx prettier --check index.js",
+    "lint:fix": "npx prettier --write .",
+    "start": "node index.js",
+    "start:dev": "NODE_ENV=offline node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szenius/notion-burndown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szenius/notion-burndown/issues"
+  },
+  "homepage": "https://github.com/szenius/notion-burndown#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "@notionhq/client": "^1.0.4",
+    "chart.js-image": "^6.0.3",
+    "dotenv": "^16.0.0",
+    "lodash": "^4.17.21",
+    "loglevel": "^1.8.0",
+    "moment": "^2.29.2",
+    "moment-timezone": "^0.5.34"
+  }
+}
