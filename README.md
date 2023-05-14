@@ -26,7 +26,7 @@ You may refer to [this template](https://szenius.notion.site/Template-Notion-Bur
 This project is published as a GitHub action in the marketplace. You can make use of scheduled GitHub workflows to run it for free.
 
 ```yml
-uses: rationally-app/notion-burndown@0.0.1
+uses: rationally-app/notion-burndown@0.0.2
 with:
   NOTION_KEY: "Notion integration access token"
   NOTION_DB_BACKLOG: "Notion Database ID of Sprint Backlog"
